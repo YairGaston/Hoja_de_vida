@@ -21,6 +21,8 @@ body {
 h2 {
     text-align: center;
     background-color: greenyellow;
+    text-decoration-color: black;
+    -moz-text-decoration-color: black;
 }
 
 form {
