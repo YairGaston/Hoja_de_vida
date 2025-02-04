@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div id="login-section">
+        <h2>Iniciar Sesión / Registrarse</h2>
+        <form id="login-form">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <button type="submit" id="login-btn">Iniciar Sesión</button>
+            <button type="button" id="register-btn">Registrarse</button>
+        </form>
+    </div>
+
+    <div id="cv-section">
+        <h2>Hoja de Vida</h2>
+        <div class="cv-item">
+            <img id="profile-image" src="https://via.placeholder.com/150" alt="Foto de perfil">
+            <button id="edit-image-btn">Cambiar Imagen</button>
+        </div>
+        <div class="cv-item">
+            <h3>Datos Personales</h3>
+            <p><strong>Nombre:</strong> <span id="name">Juan Pérez</span></p>
+            <p><strong>Email:</strong> <span id="email">juan@example.com</span></p>
+            <p><strong>Teléfono:</strong> <span id="phone">123456789</span></p>
+            <button id="edit-personal-data-btn">Editar Datos Personales</button>
+        </div>
+        <div class="cv-item">
+            <h3>Historial Académico</h3>
+            <ul id="academic-history">
+                <li>Bachillerato en Ciencias - Colegio XYZ (2010-2012)</li>
+                <li>Ingeniería en Sistemas - Universidad ABC (2013-2017)</li>
+            </ul>
+            <button id="edit-academic-history-btn">Editar Historial Académico</button>
+        </div>
+        <div class="cv-item">
+            <h3>Historial de Empleo</h3>
+            <ul id="employment-history">
+                <li>Desarrollador Junior - Empresa DEF (2018-2020)</li>
+                <li>Desarrollador Senior - Empresa GHI (2021-Presente)</li>
+            </ul>
+            <button id="edit-employment-history-btn">Editar Historial de Empleo</button>
+        </div>
+        <div class="cv-item">
+            <h3>Cursos Realizados</h3>
+            <ul id="courses">
+                <li>Curso de JavaScript - Platzi (2020)</li>
+                <li>Curso de Python - Coursera (2021)</li>
+            </ul>
+            <button id="edit-courses-btn">Editar Cursos</button>
+        </div>
+        <button id="logout-btn">Cerrar Sesión</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
